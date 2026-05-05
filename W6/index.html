@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--The type of font we are using-->
+    <meta charset="UTF-8">
+    <!--Tells the -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Joey Clayton">
+    <meta name="description" content="JavaScript Pay Calculator">
+    
+    <link type="text/css" rel="stylesheet" href="style.css">
+
+    <title> Week 6 | JavaScript Pay Calculator</title>
+    <h1> Week 6 | JavaScript Pay Calculator</h1>
+</head>
+<body>
+
+<script>
+// User Data Input -------------------------------------------------------------------
+var hourlyPay = Number(prompt("Enter your hourly pay:"));
+var hoursWorked = Number(prompt("Enter total hours worked for the two-week period:"));
+
+// Data Needs To Only Run Once ---------------------------------------------
+var gPay = hourlyPay * hoursWorked;
+var tax = 0.20;
+var uncleSam = gPay * tax;
+var netPay = gPay - uncleSam;
+
+// Format The values Of Data ---------------------------
+var grossFormatted= gPay.toFixed(2);
+var uncleFormatted = uncleSam.toFixed(2);
+var netFormatted = netPay.toFixed(2);
+
+// Output Data ------------------------
+var console
+console.log(`Gross Pay: $` + grossFormatted);
+console.log(`Uncle Sam's Share: $` + uncleFormatted);
+console.log(`Net Pay: $` + netFormatted);
+
+// Alerts After User Inputs -----------------------------------------
+alert(
+    `Gross Pay: $` + grossFormatted + "\n"
+    `Uncle Sam's Share: $` + uncleFormatted + "\n"
+    `Net Pay: $` + netFormatted
+);
+</script>
+     <div>
+        <p>&copy; J Clayton | SE111 | 202630</p> <br>
+    </div>
+</body>
+</html>
