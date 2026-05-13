@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+    <title>W8 | Data Structures in JS</title>
+</head>
+<body>
+    
+    <h1>Week 8 | Javascript Arrays & Objects</h1>
+    
+<div> 
+    id= "output"
+</div>
+   
+   <script>
+        // ARRAYS ---------------------------------
+
+        var people = [
+            `Katie`,
+            `Tyler`,
+            `Ethan`
+        ]
+
+
+        console.log(`${people}`)
+        console.log(`${people[0]}`)
+
+        console.log($`{people.length}`) //array property length --> num of items in array 
+        
+        console.log(`${people[people.length - 1]}`) //Last vaule in array 
+
+        var firstPerson = people[0]
+        console.log(`firstPerson`) // matches log from line 25
+
+        // add a person to the array without using index 
+        people.push(`Arman`)
+        console.log(`${people}`)
+
+        // get vaule from user add to array 
+        people.push (prompt(`Enter a name to add to People array:))
+        console.log(`${people}`)
+
+        var color = [
+            `grey`,
+            `red`,
+            `green`,
+            `red`,
+            `neon beige`
+        ]
+        
+        var age []
+        
+        for(let index = 0; index < people.length; index++)
+            {
+            console.log(`${people[index]}'s Favorite color is ${color[index]}!`)
+            age.push (
+                prompt(`How old is ${people[index]}?:`)
+            )        
+        }
+        
+        for(let index = 0; index < people.length; index++)
+       
+        {
+          console.log(`${people[index]} is ${age[index]}years old!`)
+        }
+
+        var output = document.querySelector(`#output`)
+
+        for(let i = 0; i < people.length; i++)
+        {
+            output.innerHTML += `<p>${people[i]} 's Favorite color is ${color[i]}!</p>
+        }
+
+
+    </script>
+
+</body>
+</html>
